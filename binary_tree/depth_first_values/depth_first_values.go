@@ -48,6 +48,9 @@ func main() {
 
 	result := depthFirstValues(tree.Root)
 	fmt.Println(result)
+
+	result = depthFirstValuesRecursive(tree.Root)
+	fmt.Println(result)
 }
 
 func depthFirstValues(root *Node) []string {
@@ -68,4 +71,20 @@ func depthFirstValues(root *Node) []string {
 	}
 
 	return result
+}
+
+func depthFirstValuesRecursive(node *Node) []string {
+	if node == nil {
+		return []string{}
+	}
+
+	leftNode := depthFirstValuesRecursive(node.Left)
+	rightNode := depthFirstValuesRecursive(node.Right)
+
+	result := append([]string{}, node.Value)
+	result = append(result, leftNode...)
+	result = append(result, rightNode...)
+
+	return result
+
 }
