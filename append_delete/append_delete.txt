@@ -1,0 +1,29 @@
+Latihan 1:
+Anda di berikan dua buah string, Anda dapat melakukan dua jenis operasi pada string pertama:
+• Tambahkan huruf di akhir string.
+• Hapus karakter terakhir dari string. Melakukan operasi ini pada string kosong menghasilkan
+string kosong.
+
+Tugas Anda adalah menghitung berapa langkah (append & delete) yg diperlukan untuk mengubah
+string pertama menjadi string kedua
+
+Contoh 1
+str1 = "klikakademi"
+str2 = "klikdokter"
+
+Untuk mengubah str1 menjadi str2 maka di perlukan 7 langkah delete "akademi" dan 6 langkah
+append "dokter" ke str1, maka total dibutuhkan 13 langkah untuk mendapatkan str1 = "klikdokter".
+
+Contoh 2
+str1 = "abc"
+str2 = "def"
+
+Untuk mengubah str1 menjadi str2 maka di perlukan 3 langkah delete "abc" sehingga str1 menjadi
+string kosong dan 3 langkah append "def" ke str1, maka pada langkah ke 6 akan di dapatkan str1 =
+"def"
+
+Buatlah sebuah fungsi di Go yang menerima inputan 2 buah string, dan mengembalikan 3 nilai yaitu
+int delete, int append, dan error.
+
+func appendDelete(str1, str2 string) (int, int, error) {
+}
