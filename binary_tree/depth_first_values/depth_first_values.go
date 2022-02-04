@@ -81,7 +81,7 @@ func depthFirstValuesRecursive(node *Node) []string {
 	leftNode := depthFirstValuesRecursive(node.Left)
 	rightNode := depthFirstValuesRecursive(node.Right)
 
-	result := append([]string{}, node.Value)
+	result := []string{node.Value}
 	result = append(result, leftNode...)
 	result = append(result, rightNode...)
 
